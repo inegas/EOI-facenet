@@ -7,7 +7,8 @@
             "birthdate": "15/05/1996",
             "startdate": "25/05/2019",
             "username": "negasg",
-            "img": "assets/300.png"
+            "img": "assets/300.png",
+            "histories":[]
         },
         {
             "id": 2,
@@ -16,7 +17,8 @@
             "birthdate": "15/05/1991",
             "startdate": "20/03/2019",
             "username": "guilleTron",
-            "img": "assets/300.png"
+            "img": "assets/300.png",
+            "histories":[]
         },
         {
             "id": 3,
@@ -25,7 +27,8 @@
             "birthdate": "15/05/1996",
             "startdate": "3/08/2019",
             "username": "FiesterMan",
-            "img": "assets/300.png"
+            "img": "assets/300.png",
+            "histories":[]
         },
         {
             "id": 4,
@@ -34,7 +37,8 @@
             "birthdate": "1/02/1980",
             "startdate": "1/05/2019",
             "username": "Don Tomas",
-            "img": "assets/300.png"
+            "img": "assets/300.png",
+            "histories":[]
         },
         {
             "id": 5,
@@ -43,7 +47,8 @@
             "birthdate": "4/03/1979",
             "startdate": "10/05/2019",
             "username": "Romeo",
-            "img": "assets/300.png"
+            "img": "assets/300.png",
+            "histories":[]
         },
         {
             "id": 6,
@@ -52,7 +57,8 @@
             "birthdate": "15/05/1988",
             "startdate": "5/05/2019",
             "username": "DAWman",
-            "img": "assets/300.png"
+            "img": "assets/300.png",
+            "histories":[]
         },
         {
             "id": 7,
@@ -61,7 +67,8 @@
             "birthdate": "15/05/1974",
             "startdate": "2/05/2019",
             "username": "Celtiña",
-            "img": "assets/300.png"
+            "img": "assets/300.png",
+            "histories":[]
         },
         {
             "id": 8,
@@ -70,7 +77,8 @@
             "birthdate": "5/05/1995",
             "startdate": "25/05/2019",
             "username": "OtakuMan",
-            "img": "assets/300.png"
+            "img": "assets/300.png",
+            "histories":[]
         }
     ]
 }

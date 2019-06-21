@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/entities/user-model';
 
 @Component({
   selector: 'app-user-view',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserViewComponent implements OnInit {
 
-  constructor() { }
+  user:User
+
+  constructor(private userService:UserService) { }
 
   ngOnInit() {
+    this.getUser();
   }
 
+  getUser(){
+    this.userService.getUser().subscribe(
+      (data:User) => {
+        this.user = data;
+      },
+      error => console.log(error),
+      () => console.log('user load')
+    );
+  }
 }

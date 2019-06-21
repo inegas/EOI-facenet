@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 //Router
 import { AppRoutingModule, routing } from './app-routing.module';
@@ -32,7 +33,8 @@ import { Notfound404Component } from './components/notfound404/notfound404.compo
     BrowserModule,
     AppRoutingModule,
     routing,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

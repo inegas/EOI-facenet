@@ -1,12 +1,12 @@
 <section>
-  <ul>
-    <li>Name:</li>
-    <li>Surname:</li>
-    <li>Birthdate:</li>
-    <li>Start date:</li>
-    <li>User name:</li>
+  <ul *ngIf="user">
+    <li>Name: {{user.name}}</li>
+    <li>Surname: {{user.surname}}</li>
+    <li>Birthdate: {{user.birthdate}}</li>
+    <li>Start date: {{user.startdate}}</li>
+    <li>User name: {{user.username}}</li>
   </ul>
-  <img src="assets/300.png" alt="">
+  <img src="assets/300.png" alt="img no encontrada">
 </section>
 <section>
   <textarea rows="4" cols="50"></textarea>
