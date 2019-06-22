@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/entities/user-model';
+import { Historie } from 'src/app/entities/historie-model';
+import { HistoriesService } from 'src/app/services/histories.service';
 
 @Component({
   selector: 'app-user-view',
@@ -10,8 +12,11 @@ import { User } from 'src/app/entities/user-model';
 export class UserViewComponent implements OnInit {
 
   user:User
+  /* historie:Historie; */
 
-  constructor(private userService:UserService) { }
+  constructor(
+    private userService:UserService,
+    private historieService:HistoriesService) { }
 
   ngOnInit() {
     this.getUser();
@@ -25,5 +30,10 @@ export class UserViewComponent implements OnInit {
       error => console.log(error),
       () => console.log('user load')
     );
+  };
+
+  postHistorie(historie:Historie){
+    this.historieService.postHistorie(historie).subscribe();
   }
+
 }

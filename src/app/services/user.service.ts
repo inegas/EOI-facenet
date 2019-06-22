@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from '../entities/user-model';
+import { Historie } from '../entities/historie-model';
 
 const httpOptions = {
       headers: new HttpHeaders({

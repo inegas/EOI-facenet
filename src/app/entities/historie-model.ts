@@ -1,5 +1,7 @@
+import { User } from './user-model';
+
 export class Historie{
     id: number;
-    userid:number;
+    user:User;
     text: string;
 }
