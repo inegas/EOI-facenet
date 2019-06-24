@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Historie } from '../entities/historie-model';
+import { User } from '../entities/user-model';
 
 const httpOptions = {
       headers: new HttpHeaders({
@@ -16,6 +17,7 @@ const URL_BASE = 'http://localhost:3000/user';
 })
 export class UserService {
 
+ /*  userLogged:User; */
   id = 1;
 
   constructor( private http:HttpClient) { }
@@ -24,4 +26,8 @@ export class UserService {
     const url = `${URL_BASE}/${this.id}`;
     return this.http.get(url);
   };
+
+  /* setUserLogged(user:User){
+    this.userLogged = user;
+  }; */
 }

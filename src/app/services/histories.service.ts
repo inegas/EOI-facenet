@@ -23,4 +23,9 @@ export class HistoriesService {
     const url = `${URL_BASE}`;
     return this.http.post(url, historie, httpOptions);
   };
+
+  getHistories(){
+     const url = `${URL_BASE}`;
+     return this.http.get(url);
+  }
 }

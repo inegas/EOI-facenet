@@ -9,12 +9,15 @@
   <img src="assets/300.png" alt="img no encontrada">
 </section>
 <section>
-  <textarea rows="4" cols="50"></textarea>
+  <textarea [(ngModel)]="historie.text" rows="4" cols="50"></textarea>
 <button (click)="postHistorie(historie)">Send historie</button>
 </section>
 <section>
   <h2>My histories</h2>
-  <section>
+  <section *ngFor="let h of allHistories">
     <!-- Salida de la historie -->
+    <img [src]="h.user.img" alt="">
+    <p>{{h.text}}</p>
+
   </section>
 </section>

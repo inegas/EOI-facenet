@@ -12,7 +12,9 @@ import { HistoriesService } from 'src/app/services/histories.service';
 export class UserViewComponent implements OnInit {
 
   user:User
-  /* historie:Historie; */
+  historie:Historie;
+  allHistories:Historie[];
+  
 
   constructor(
     private userService:UserService,
@@ -20,6 +22,10 @@ export class UserViewComponent implements OnInit {
 
   ngOnInit() {
     this.getUser();
+    this.getHistories();
+    this.historie = new Historie();
+    this.historie.id = null;
+    this.historie.user =  new User();
   }
 
   getUser(){
@@ -32,8 +38,21 @@ export class UserViewComponent implements OnInit {
     );
   };
 
+  getHistories(){
+    this.historieService.getHistories().subscribe(
+      (data:Historie[]) =>{
+        this.allHistories = data;
+      }
+    );
+  };
+
   postHistorie(historie:Historie){
-    this.historieService.postHistorie(historie).subscribe();
-  }
+    this.historie.user.id = this.user.id;
+    this.historie.user.username = this.user.username;
+    this.historie.user.img = this.user.img;
+    this.historieService.postHistorie(historie).subscribe(
+      () => this.getHistories()
+    );
+  };
 
 }

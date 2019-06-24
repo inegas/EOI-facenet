@@ -75,10 +75,40 @@
   ],
   "histories": [
     {
-      "id": 1
+      "id": 10,
+      "user": {
+        "id": 1,
+        "username": "negasg",
+        "img": "assets/300.png"
+      },
+      "text": "jejejeje"
     },
     {
-      "id": 2
+      "id": 11,
+      "user": {
+        "id": 1,
+        "username": "negasg",
+        "img": "assets/300.png"
+      },
+      "text": "Bravooo!!"
+    },
+    {
+      "id": 12,
+      "user": {
+        "id": 1,
+        "username": "negasg",
+        "img": "assets/300.png"
+      },
+      "text": "a full the mango"
+    },
+    {
+      "id": 13,
+      "user": {
+        "id": 1,
+        "username": "negasg",
+        "img": "assets/300.png"
+      },
+      "text": "calamardo"
     }
   ]
 }
