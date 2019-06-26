@@ -26,6 +26,7 @@ export class UserViewComponent implements OnInit {
     this.historie = new Historie();
     this.historie.id = null;
     this.historie.user =  new User();
+    this.historie.date = Date.now();
   }
 
   getUser(){

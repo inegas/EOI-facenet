@@ -4,4 +4,5 @@ export class Historie{
     id: number;
     user:User;
     text: string;
+    date: number;
 }
