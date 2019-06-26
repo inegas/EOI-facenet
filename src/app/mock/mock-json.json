@@ -135,6 +135,14 @@
     }
   ],
   "relationship":[
+    {
+      
+     "id": 1,
+    "idsent": 1,
+    "idrecive": 2,
+    "state": 0,
+    "date": 1561555184020
+    }
     
   ]
 

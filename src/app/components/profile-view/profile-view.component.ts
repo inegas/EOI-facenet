@@ -3,6 +3,8 @@ import { User } from 'src/app/entities/user-model';
 import { Historie } from 'src/app/entities/historie-model';
 import { UserService } from 'src/app/services/user.service';
 import { HistoriesService } from 'src/app/services/histories.service';
+import { Relationship } from 'src/app/entities/relationship-model';
+import { RelationshipService } from 'src/app/services/relationship.service';
 
 @Component({
   selector: 'app-profile-view',
@@ -11,22 +13,31 @@ import { HistoriesService } from 'src/app/services/histories.service';
 })
 export class ProfileViewComponent implements OnInit {
 
-   user:User
+  user:User
   historie:Historie;
   allHistories:Historie[];
+  relation:Relationship;
+  allRelationships:Relationship[];
   
 
   constructor(
     private userService:UserService,
-    private historieService:HistoriesService) { }
+    private historieService:HistoriesService,
+    private relationship:RelationshipService) { }
 
   ngOnInit() {
     this.getUser();
     this.getHistories();
+
     this.historie = new Historie();
     this.historie.id = null;
     this.historie.user =  new User();
     this.historie.date = Date.now();
+
+    this.relation = new Relationship();
+    this.relation.id = null;
+    this.relation.date = Date.now();
+
   }
 
   getUser(){
@@ -55,4 +66,6 @@ export class ProfileViewComponent implements OnInit {
       () => this.getHistories()
     );
   };
+
+  
 }
