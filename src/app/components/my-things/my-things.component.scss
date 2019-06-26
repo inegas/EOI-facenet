@@ -1,0 +1,95 @@
+.imgFirst{
+     border-radius: 50%;
+     width: 15vw;
+     height: 30vh;
+     position: relative;
+     left: 35vw;
+     top: 1vh;
+}
+
+ul{
+    position: relative;
+    top: 2vw;
+    right: 30vw;
+    display: block;
+    float: right;
+}
+li{
+    padding-bottom: 0.5em;
+}
+.l2{
+    position: relative;
+    right: 5vw;
+}
+.l3{
+    position: relative;
+    right: 4vw;
+}
+.l1{
+    position: relative;
+    right: 3vw;
+}
+
+textarea{
+    position: relative;
+    top: 5vh;
+    left: 25vw;
+    width: 50vw;
+    height: 30vh;
+}
+
+button{
+    position: relative;
+    top: 9vh;
+    right: 3.5vw;
+}
+.card-img{
+    border-radius: 50%;
+     width: 5vw;
+     height: 10vh;
+     
+}
+
+.out{
+    position: relative;
+    display: flex;
+   /*  border: 1px solid blue; */
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    width: 45vw;
+}
+
+.card{
+    width: 40vw;
+    position: relative;
+    left: 4vw;
+    
+}
+
+.outHistorie{
+     /*  border: 1px solid red; */ 
+     margin-top: 4vh;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap; 
+     flex-grow: 1;
+
+}
+
+.list-group{
+    
+    width: 40vw;
+    
+}
+.coleguis{
+   /*  border: 1px solid blue;  */
+    width: 40vw;
+    position: relative;
+    left: 10vw;
+}
+.visual{
+     /* border: 1px solid green;  */
+     width: 45vw;
+     position: relative;
+    left: 2vw;
+}

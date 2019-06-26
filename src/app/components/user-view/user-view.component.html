@@ -19,6 +19,7 @@
   <section class="out" *ngFor="let h of allHistories">
     <!-- Salida de la historie -->
     <div class="card">
+      <p>{{h.user.username}}</p>
       <img [src]="h.user.img" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-title">{{h.date | date: 'M/d/yy, h:mm a'}}</p>
