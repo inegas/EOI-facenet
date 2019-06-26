@@ -17,6 +17,7 @@ import { MyFriendsComponent } from './components/my-friends/my-friends.component
 import { EventsComponent } from './components/events/events.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { Notfound404Component } from './components/notfound404/notfound404.component';
+import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { Notfound404Component } from './components/notfound404/notfound404.compo
     EventsComponent,
     FooterComponent,
     Notfound404Component,
+    ProfileViewComponent,
   ],
   imports: [
     BrowserModule,
