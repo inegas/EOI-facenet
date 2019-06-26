@@ -1,9 +1,10 @@
-img{
+.imgFirst{
      border-radius: 50%;
      width: 15vw;
      height: 30vh;
      position: relative;
      left: 35vw;
+     top: 1vh;
 }
 
 ul{
@@ -28,4 +29,43 @@ li{
     position: relative;
     right: 3vw;
 }
+
+.historie{
+    /* background-color: black; */
+    height: 20vw;
+}
+textarea{
+    position: relative;
+    top: 5vh;
+    left: 25vw;
+    width: 50vw;
+    height: 30vh;
+}
+
+button{
+    position: relative;
+    top: 9vh;
+    right: 3.5vw;
+}
+.card-img{
+    border-radius: 50%;
+     width: 5vw;
+     height: 10vh;
+     
+}
+
+.out{
+    /* border: 1px solid blue; */
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    width: 100vw;
+}
+
+.card{
+    width: 70vw;
+    position: relative;
+    left: 15vw;
+}
+
+
 

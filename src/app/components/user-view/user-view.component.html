@@ -6,18 +6,26 @@
     <li class="l3">Start date: {{user.startdate}}</li>
     <li class="l2">User name: {{user.username}}</li>
   </ul>
-  <img src="assets/300.png" alt="img no encontrada">
+  <img class="imgFirst" src="assets/300.png" alt="img no encontrada">
 </section>
-<section>
+
+<section class="historie">
   <textarea [(ngModel)]="historie.text" rows="4" cols="50"></textarea>
-<button (click)="postHistorie(historie)">Send historie</button>
+  <button class="btn btn-primary" (click)="postHistorie(historie)">Send</button>
 </section>
-<section>
-  <h2>My histories</h2>
-  <section *ngFor="let h of allHistories">
+
+<!-- <h2>My histories</h2> -->
+<section class="outHistorie">
+  <section class="out" *ngFor="let h of allHistories">
     <!-- Salida de la historie -->
-    <img [src]="h.user.img" alt="">
-    <p>{{h.text}}</p>
-    <p>{{h.date | date: 'M/d/yy, h:mm a'}}</p>
+    <div class="card">
+      <img [src]="h.user.img" class="card-img" alt="...">
+      <div class="card-body">
+        <p class="card-title">{{h.date | date: 'M/d/yy, h:mm a'}}</p>
+        <p class="card-text">{{h.text}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
   </section>
 </section>
