@@ -3,13 +3,29 @@ img{
      width: 15vw;
      height: 30vh;
      position: relative;
-     left: 2vw;
+     left: 35vw;
 }
 
 ul{
     position: relative;
     top: 2vw;
-    right: 65vw;
+    right: 30vw;
     display: block;
     float: right;
 }
+li{
+    padding-bottom: 0.5em;
+}
+.l2{
+    position: relative;
+    right: 5vw;
+}
+.l3{
+    position: relative;
+    right: 4vw;
+}
+.l1{
+    position: relative;
+    right: 3vw;
+}
+
