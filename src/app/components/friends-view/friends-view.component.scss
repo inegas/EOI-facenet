@@ -1,0 +1,65 @@
+.imgFirst{
+     border-radius: 50%;
+     width: 15vw;
+     height: 30vh;
+     position: relative;
+     left: 35vw;
+     top: 1vh;
+}
+
+ul{
+    position: relative;
+    top: 2vw;
+    right: 30vw;
+    display: block;
+    float: right;
+}
+li{
+    padding-bottom: 0.5em;
+}
+.l2{
+    position: relative;
+    right: 5vw;
+}
+.l3{
+    position: relative;
+    right: 4vw;
+}
+.l1{
+    position: relative;
+    right: 3vw;
+}
+
+.search{
+    padding-top: 5vh;
+    width: 40vw;
+    position: relative;
+    left: 30vw;
+}
+
+.card{
+    margin-top: 3vh;
+    width: 30vw;
+    
+}
+.friends{
+   /*  border: 1px solid blue; */
+    width: 30vw;
+    position: relative;
+    left: 15vw;
+}
+
+.posibleFriend{
+    /* border: 1px solid blue; */
+    width: 30vw;
+    position: relative;
+    left: 30vw;
+    
+}
+.fatherFriends{
+   /*  border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 4vh;
+}

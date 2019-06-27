@@ -9,4 +9,6 @@ export class Relationship{
     //2 -> Denegated
      state:number;
      date:number;
+
+     //Desmontar
 }

@@ -27,7 +27,8 @@ export class UserService {
     return this.http.get(url);
   };
 
-  /* setUserLogged(user:User){
-    this.userLogged = user;
-  }; */
+  getAllUsers(){
+    const url = `${URL_BASE}`;
+    return this.http.get(url);
+  }
 }
