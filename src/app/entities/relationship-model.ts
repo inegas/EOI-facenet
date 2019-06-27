@@ -1,9 +1,11 @@
+import { User } from './user-model';
+
 export class Relationship{
     id:number;
     //id usario que envia
-    idsent:number;
+    usersend:User;
     //id del usuario al que la envia
-    idrecive:number;
+    userrecived:User;
     //O -> Sended
     //1 -> Acepted
     //2 -> Denegated

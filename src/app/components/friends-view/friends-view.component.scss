@@ -43,10 +43,13 @@ li{
     
 }
 .friends{
-   /*  border: 1px solid blue; */
-    width: 30vw;
+    /* border: 1px solid blue; */
+    width: 33vw;
     position: relative;
     left: 15vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 60vh;
 }
 
 .posibleFriend{

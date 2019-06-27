@@ -9,6 +9,7 @@ import { User } from 'src/app/entities/user-model';
 })
 export class FriendsViewComponent implements OnInit {
 
+  search:string;
   user:User;
   allUsers:User[];
 
@@ -16,15 +17,16 @@ export class FriendsViewComponent implements OnInit {
 
   ngOnInit() {
     this.getUser();
+    this.getAllUsers();
   }
 
-  /* getAllUsers(){
+  getAllUsers(){
     this.userService.getAllUsers().subscribe(
-      (data:User[] =>{
-
-      })
-    )
-  }; */
+      (data:User[]) =>{
+        this.allUsers = data;
+      }
+    );
+  };
 
   getUser(){
     this.userService.getUser().subscribe(
@@ -34,6 +36,13 @@ export class FriendsViewComponent implements OnInit {
       error => console.log(error),
       () => console.log('user load')
     );
+  };
+
+  userSearched(){
+  const result = this.allUsers.filter(
+      user => user.name.includes(this.search));
+  console.log(result);
+  
   };
 
 }

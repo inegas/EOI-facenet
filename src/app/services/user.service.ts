@@ -30,5 +30,5 @@ export class UserService {
   getAllUsers(){
     const url = `${URL_BASE}`;
     return this.http.get(url);
-  }
+  };
 }

@@ -10,19 +10,20 @@
 </section>
 <section class="search">
   <div class="md-form mt-0">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    <input [(ngModel)]="search" (ngModelChange)="userSearched()" class="form-control" type="text" placeholder="Search" aria-label="Search">
   </div>
 </section>
 <section class="fatherFriends">
   <section class="friends">
-    <div class="card mb-3">
+    <div *ngFor="let friends of allUsers " class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="..." class="card-img" alt="...">
+          <img [src]="friends.img" class="card-img" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <p class="card-text">Juanito</p>
+            <p class="card-text">{{friends.name}}</p>
+            <p class="card-text">{{friends.username}}</p>
           </div>
         </div>
       </div>
