@@ -43,7 +43,6 @@ export class FriendsViewComponent implements OnInit {
   };
 
   userSearched(){
-    
     //Esto funciona pero es cutre
     /* if(this.search === null || this.search === undefined || this.search === "" ){
       this.getAllUsers();
@@ -61,6 +60,11 @@ export class FriendsViewComponent implements OnInit {
           this.allUsers = data;
       });
     };
+  };
+
+  //Me quedé aquí
+  userSelected(){
+    
   };
 
 }
