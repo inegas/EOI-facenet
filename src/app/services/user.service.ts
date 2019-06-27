@@ -20,7 +20,7 @@ export class UserService {
  /*  userLogged:User; */
   id = 1;
 
-  constructor( private http:HttpClient) { }
+  constructor(private http:HttpClient) { }
 
   getUser(){
     const url = `${URL_BASE}/${this.id}`;

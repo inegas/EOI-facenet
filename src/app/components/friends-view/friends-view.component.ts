@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/entities/user-model';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-friends-view',
@@ -13,7 +14,10 @@ export class FriendsViewComponent implements OnInit {
   user:User;
   allUsers:User[];
 
-  constructor(private userService:UserService) { }
+  constructor(
+    private userService:UserService,
+    private searchService:SearchService
+  ) { }
 
   ngOnInit() {
     this.getUser();
@@ -39,10 +43,24 @@ export class FriendsViewComponent implements OnInit {
   };
 
   userSearched(){
-  const result = this.allUsers.filter(
+    
+    //Esto funciona pero es cutre
+    /* if(this.search === null || this.search === undefined || this.search === "" ){
+      this.getAllUsers();
+    }else{
+       this.allUsers = this.allUsers.filter(
       user => user.name.includes(this.search));
-  console.log(result);
-  
+    }  */
+
+    //De esta forma busca contra la API.
+    if (this.search === null || this.search === undefined || this.search.trim().length === 0) {
+      this.getAllUsers();
+    }else{
+        this.searchService.searchUser(this.search.trim()).subscribe(
+        (data:User[]) =>{
+          this.allUsers = data;
+      });
+    };
   };
 
 }
