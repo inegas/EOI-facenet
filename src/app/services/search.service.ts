@@ -19,7 +19,7 @@ export class SearchService {
   constructor(private http:HttpClient) { }
 
   searchUser(name:string){
-    return this.http.get(`${URL_BASE}?name_like=${name}`);
+    return this.http.get(`${URL_BASE}?name_like=${name}&id_ne=1`);
   }
 
 }

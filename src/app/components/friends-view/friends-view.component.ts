@@ -52,7 +52,7 @@ export class FriendsViewComponent implements OnInit {
       user => user.name.includes(this.search));
     }  */
 
-    //De esta forma busca contra la API.
+    //De esta forma busca contra la API. _like va full de mango
     if (this.search === null || this.search === undefined || this.search.trim().length === 0) {
       this.getAllUsers();
     }else{

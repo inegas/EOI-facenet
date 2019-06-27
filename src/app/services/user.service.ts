@@ -28,7 +28,7 @@ export class UserService {
   };
 
   getAllUsers(){
-    const url = `${URL_BASE}`;
+    const url = `${URL_BASE}?id_ne=1`;
     return this.http.get(url);
   };
 }
