@@ -112,5 +112,4 @@ export class FriendsViewComponent implements OnInit {
     );
     return status;
   }
-
 }
