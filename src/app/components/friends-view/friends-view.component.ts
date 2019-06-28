@@ -12,6 +12,7 @@ export class FriendsViewComponent implements OnInit {
 
   search:string;
   user:User;
+  showUser:User;
   allUsers:User[];
 
   constructor(
@@ -63,8 +64,16 @@ export class FriendsViewComponent implements OnInit {
   };
 
   //Me quedé aquí
-  userSelected(){
+  userSelected(event:User){
+    /* console.log(event.name); */
+    this.showUser = new User();
+    this.showUser.name = event.name;
+    this.showUser.username = event.username;
+    this.showUser.birthdate = event.birthdate;
+    this.showUser.startdate = event.startdate;
     
+
+
   };
 
 }

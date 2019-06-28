@@ -15,7 +15,7 @@
 </section>
 <section class="fatherFriends">
   <section class="friends">
-    <div (click)="userSelected()"  *ngFor="let friends of allUsers" class="card mb-3">
+    <div (click)="userSelected(friends)"  *ngFor="let friends of allUsers" class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
           <img [src]="friends.img" class="card-img" alt="...">
@@ -37,9 +37,10 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">{{user.name}}</h5>
-            <p class="card-text">{{user.birthdate}}</p>
-            <p class="card-text"><small class="text-muted">{{user.startdate}}</small></p>
+            <h5 class="card-title">{{showUser.name}}</h5>
+            <p class="card-text">{{showUser.username}}</p>
+            <p class="card-text">{{showUser.birthdate}}</p>
+            <p class="card-text"><small class="text-muted">{{showUser.startdate}}</small></p>
           </div>
         </div>
       </div>
