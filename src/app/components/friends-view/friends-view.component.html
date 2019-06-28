@@ -34,8 +34,10 @@
       <div class="row no-gutters">
         <div class="col-md-4">
           <img [src]="showUser.img" class="card-img" alt="...">
-          <button (click)="sendRequest()" type="button" class="btn btn-primary">Send Request</button>
-         <!--  <button *ngIf="requestFriend?.state === 0" type="button" class="btn btn-primary">Sended</button> -->
+          <button  (click)="sendRequest()" type="button" class="btn btn-primary" *ngIf="getStatusUser(showUser) === -1">Send Request</button>
+          <button  (click)="sendRequest()" type="button" class="btn btn-primary" *ngIf="getStatusUser(showUser) === 1">Cancel Request</button>
+          <button  (click)="sendRequest()" type="button" class="btn btn-primary" *ngIf="getStatusUser(showUser) === 0">Waiting Response</button>
+          <!-- <button type="button" class="btn btn-primary">Sended</button> -->
         </div>
         <div class="col-md-8">
           <div class="card-body">

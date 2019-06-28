@@ -17,6 +17,7 @@ export class FriendsViewComponent implements OnInit {
   showUser:User;
   allUsers:User[];
   requestFriend:Relationship;
+  allRequests:Relationship[];
 
   constructor(
     private userService:UserService,
@@ -27,6 +28,7 @@ export class FriendsViewComponent implements OnInit {
   ngOnInit() {
     this.getUser();
     this.getAllUsers();
+    this.getRequest();
   }
 
   getAllUsers(){
@@ -87,6 +89,28 @@ export class FriendsViewComponent implements OnInit {
     this.requestFriend.state = 0;
     this.requestFriend.date = Date.now();
     this.relationshipService.postRequest(this.requestFriend).subscribe();
+  };
+
+  getRequest(){
+    this.relationshipService.getRequest().subscribe(
+      (data:Relationship[]) =>{
+        this.allRequests = data;
+        console.log(data);
+        
+      }
+    )
+  };
+
+  getStatusUser(friend: User) {
+    let status = -1;
+    this.allRequests.map( request => {
+      if( request.userrecived.id === friend.id) {
+        status = request.state;
+        return true;
+      }
+    }
+    );
+    return status;
   }
 
 }
