@@ -24,7 +24,7 @@ export class RelationshipService {
   };
 
   getRequest(){
-    return this.http.get(`${URL_BASE}?state=0&usersend.id=1`);
+    return this.http.get(`${URL_BASE}?usersend.id=1`);
   };
 
 }
