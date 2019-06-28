@@ -8,6 +8,7 @@ export class Relationship{
     userrecived:User;
     //O -> Sended
     //1 -> Acepted
+    //2 -> Denegada
      state:number;
      date:number;
 }

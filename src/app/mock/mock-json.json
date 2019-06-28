@@ -137,13 +137,6 @@
   "relationship": [
     {
       "id": 1,
-      "idsent": 1,
-      "idrecive": 2,
-      "state": 0,
-      "date": 1561555184020
-    },
-    {
-      "id": 2,
       "usersend": {
         "id": 1,
         "name": "Angel",
@@ -154,29 +147,7 @@
         "img": "assets/300.png"
       },
       "userrecived": {
-        "id": 1,
-        "name": "Angel",
-        "surname": "Banegas",
-        "birthdate": "15/05/1996",
-        "startdate": "25/05/2019",
-        "username": "negasg",
-        "img": "assets/300.png"
-      },
-      "state": 0,
-      "date": 1561732235367
-    },
-    {
-      "id": 3,
-      "usersend": {
-        "id": 1,
-        "name": "Angel",
-        "surname": "Banegas",
-        "birthdate": "15/05/1996",
-        "startdate": "25/05/2019",
-        "username": "negasg",
-        "img": "assets/300.png"
-      },
-      "userrecived": {
+        "id": 2,
         "name": "Guillermos",
         "username": "guilleTron",
         "birthdate": "15/05/1991",
@@ -184,28 +155,7 @@
         "img": "assets/300.png"
       },
       "state": 0,
-      "date": 1561732373088
-    },
-    {
-      "id": 4,
-      "usersend": {
-        "id": 1,
-        "name": "Angel",
-        "surname": "Banegas",
-        "birthdate": "15/05/1996",
-        "startdate": "25/05/2019",
-        "username": "negasg",
-        "img": "assets/300.png"
-      },
-      "userrecived": {
-        "name": "Bryan",
-        "username": "FiesterMan",
-        "birthdate": "15/05/1996",
-        "startdate": "3/08/2019",
-        "img": "assets/300.png"
-      },
-      "state": 0,
-      "date": 1561732483193
+      "date": 1561734110017
     }
   ]
 }
