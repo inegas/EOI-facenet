@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/entities/user-model';
 import { SearchService } from 'src/app/services/search.service';
+import { Relationship } from 'src/app/entities/relationship-model';
+import { RelationshipService } from 'src/app/services/relationship.service';
 
 @Component({
   selector: 'app-friends-view',
@@ -14,10 +16,12 @@ export class FriendsViewComponent implements OnInit {
   user:User;
   showUser:User;
   allUsers:User[];
+  requestFriend:Relationship;
 
   constructor(
     private userService:UserService,
-    private searchService:SearchService
+    private searchService:SearchService,
+    private relationshipService:RelationshipService
   ) { }
 
   ngOnInit() {
@@ -72,9 +76,16 @@ export class FriendsViewComponent implements OnInit {
     this.showUser.birthdate = event.birthdate;
     this.showUser.startdate = event.startdate;
     this.showUser.img = event.img;
-
-
-
   };
+
+  sendRequest(){
+    this.requestFriend = new Relationship();
+    this.requestFriend.id = null;
+    this.requestFriend.usersend = this.user;
+    this.requestFriend.userrecived = this.showUser;
+    this.requestFriend.state = 0;
+    this.requestFriend.date = Date.now();
+    this.relationshipService.postRequest(this.requestFriend).subscribe();
+  }
 
 }
