@@ -71,7 +71,8 @@ export class FriendsViewComponent implements OnInit {
     this.showUser.username = event.username;
     this.showUser.birthdate = event.birthdate;
     this.showUser.startdate = event.startdate;
-    
+    this.showUser.img = event.img;
+
 
 
   };
