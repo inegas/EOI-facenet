@@ -71,6 +71,7 @@ export class FriendsViewComponent implements OnInit {
   userSelected(event:User){
     /* console.log(event.name); */
     this.showUser = new User();
+    this.showUser.id = event.id;
     this.showUser.name = event.name;
     this.showUser.username = event.username;
     this.showUser.birthdate = event.birthdate;
